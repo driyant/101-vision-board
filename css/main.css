@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+:root {
+  font-size: 18px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(209, 209, 209);
+  font-family: "Montserrat", sans-serif;
+}
+
+p {
+  text-transform: uppercase;
+  width: 40%;
+  margin: 1em 0;
+}
+
+span {
+  background-color: yellow;
+  padding: 0.2em 0.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+p.year {
+    font-family:'Permanent Marker', cursive;
+    font-weight: bold;
+}
+
+strong {
+    text-transform: capitalize;
+    font-size: 2rem;
+}
+
+ul li {
+  list-style: none;
+  text-transform: uppercase;
+}
+
+#vision-board {
+  max-width: 90%;
+  display: flex;
+  flex-flow: column wrap;
+  background: url("../img/background.png") center no-repeat;
+  background-size: cover;
+  font-family: "Montserrat", sans-serif;
+}
+
+#vision-board section.grow .col-1,
+section.grow .col-2,
+section.grow .col-3 {
+  height: 200px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#vision-board section.grow .col-1,
+section.grow .col-3 {
+  background-color: rgb(255, 255, 255);
+}
+
+#vision-board section.freelance .col-1,
+#vision-board section.freelance .col-2,
+#vision-board section.freelance .col-3 {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 350px;
+}
+
+#vision-board section.freelance .col-2 {
+  background-color: #3b3b3b;
+  color: white;
+}
+
+#vision-board section.mind-and-body .col-1,
+section.mind-and-body .col-3 {
+  background-color: rgb(255, 255, 255);
+}
+
+#vision-board section.mind-and-body .col-1,
+#vision-board section.mind-and-body .col-2,
+#vision-board section.mind-and-body .col-3 {
+  height: 200px;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+@media screen and (min-width:1000px) {
+
+  #vision-board {
+    max-width: 90%;
+    margin-top: 20px;
+    display: flex;;
+    flex-flow: row wrap;
+  }
+
+  .grow, .freelance, .mind-and-body {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .col-1 {
+    flex-basis: 33.3%;
+  }
+
+  .col-2 {
+    flex-basis: 33.3%;
+  }
+
+  .col-3 {
+    flex-basis: 33.3%;
+  }
+
+  .grow, .mind-and-body {
+    height: auto;
+  }
+
+  #vision-board section.grow .col-1 span,
+  #vision-board section.grow .col-1 p {
+    margin-top: .5em;
+  }
+
+  #vision-board section.grow .col-1 p {
+    width: 100%;
+  }
+
+  #vision-board section.freelance .col-3 span,
+  #vision-board section.freelance .col-3 p {
+    margin-left: 7.5em;
+  }
+}
