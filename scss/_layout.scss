@@ -1,0 +1,20 @@
+@mixin flexColumn() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    flex-basis: 200px;
+}
+
+@function gridRow($row) {
+    $val : $row;
+    @for $i from 1 through 9 {
+        @return #{i};
+    }
+}
+
+@mixin displayGridColumn() {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: gridRow(250px);
+}

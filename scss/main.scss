@@ -1,20 +1,56 @@
 @import "default-config";
+@import "layout";
 
 body {
     background: $body-color;
     color: $primary-text-color;
     font-family: $primary-font;
-    font-weight: map-get($font-weights, regular);
+    font-weight: map-get($font-weights, medium);
 }
 
 main {
     width: 90%;
-    margin: 0 auto;
+    margin: auto auto;
     background: url("../img/background.png") center no-repeat;
     background-size: cover;
-}
+    @include flexColumn();
+    
+    & > div {
+        @include flexColumn();
+        width: 100%;
+    }
 
-.vision__eye {
-    background:$vision-color;
-    color: $secondary-text-color;
+    p {
+        font-size: 1rem;
+        text-align: center;
+        align-items: center;
+        text-transform: uppercase;
+    }
+
+    span {
+        text-transform: uppercase;
+        background: yellow;
+        padding: 0.5rem;
+        margin: 1rem 0;
+        font-weight: map-get($font-weights, bold);
+    }
+
+    strong {
+        font-size: 2rem;
+        text-transform: capitalize;
+    }
+
+    ul li {
+        list-style-type: none;
+        text-transform: uppercase;
+    }
+
+    .grow , .programming, .sentence, .main__body {
+        background: #fff;
+    }
+
+    .vision__eye {
+        background:$vision-color;
+        color: $secondary-text-color;
+    }
 }
