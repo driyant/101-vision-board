@@ -1,0 +1,13 @@
+@include media-md {
+   main {
+       @include displayGridColumn(2);
+       grid-template-rows: 300px 300px 450px 300px 300px;
+    }
+}
+
+@include media-lg {
+    main {
+        @include displayGridColumn(3);
+        grid-template-rows: 300px 450px 300px;
+    }
+}

@@ -1,5 +1,6 @@
 @import "default-config";
 @import "layout";
+@import "responsive";
 
 body {
     background: $body-color;
@@ -13,11 +14,15 @@ main {
     margin: auto auto;
     background: url("../img/background.png") center no-repeat;
     background-size: cover;
+    overflow: hidden;
     @include flexColumn();
     
-    & > div {
+    & div {
         @include flexColumn();
         width: 100%;
+        flex-basis: 250px;
+        height: 100%;
+        border: 1px solid black;
     }
 
     p {
@@ -33,6 +38,10 @@ main {
         padding: 0.5rem;
         margin: 1rem 0;
         font-weight: map-get($font-weights, bold);
+
+        &.year {
+            background: none;
+        }
     }
 
     strong {
@@ -48,9 +57,15 @@ main {
     .grow , .programming, .sentence, .main__body {
         background: #fff;
     }
-
+    
+    .freelance, .vision__eye, .travel {
+        padding : 2rem 0;
+    }
+    
     .vision__eye {
         background:$vision-color;
         color: $secondary-text-color;
     }
+
+    @include media-md();
 }

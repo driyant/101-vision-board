@@ -1,20 +1,23 @@
 @mixin flexColumn() {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    flex-flow: column wrap;
-    flex-basis: 200px;
+    flex-flow: column nowrap;
 }
 
-@function gridRow($row) {
-    $val : $row;
-    @for $i from 1 through 9 {
-        @return #{i};
+@mixin displayGridColumn($input) {
+    display: grid !important;
+    grid-template-columns:repeat($input,1fr);
+}
+
+@mixin media-md {
+    @media screen and (min-width:768px) {
+        @content;
     }
 }
 
-@mixin displayGridColumn() {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: gridRow(250px);
+@mixin media-lg {
+    @media screen and (min-width:1200px) {
+        @content;
+    }
 }
