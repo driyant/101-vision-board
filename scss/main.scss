@@ -1,0 +1,20 @@
+@import "default-config";
+
+body {
+    background: $body-color;
+    color: $primary-text-color;
+    font-family: $primary-font;
+    font-weight: map-get($font-weights, regular);
+}
+
+main {
+    width: 90%;
+    margin: 0 auto;
+    background: url("../img/background.png") center no-repeat;
+    background-size: cover;
+}
+
+.vision__eye {
+    background:$vision-color;
+    color: $secondary-text-color;
+}
