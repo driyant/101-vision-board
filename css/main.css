@@ -115,6 +115,8 @@ main strong {
 main ul li {
   list-style-type: none;
   text-transform: uppercase;
+  margin-bottom: 1rem;
+  font-size: 1.275rem;
 }
 
 main .grow, main .programming, main .sentence, main .main__body {
