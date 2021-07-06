@@ -1,25 +1,19 @@
-const main = document.querySelector("main");
+const divs = document.querySelectorAll('div');
 
-window.addEventListener("load", getAnime);
-
-function getAnime() {
+const handleMouseOver = (e) => {
     anime({
-        targets: "main",
-        translateX: {
-            value: 250,
-            duration: 800,
-        },
-        rotate: {
-            value: 360,
-            duration: 1800,
-            easing: "easeInOutSine",
-        },
-        scale: {
-            value: 2,
-            duration: 1600,
-            delay: 800,
-            easing: "easeInOutQuart",
-        },
-        delay: 250, // All properties except 'scale' inherit 250ms delay
-    });
+        targets: e.target,
+        rotateY: 45,
+        duration:500
+    })
 }
+
+const handleMouseOut = (e) => {
+    anime({
+        targets: e.target,
+        rotateY: 0
+    })
+}
+
+divs.forEach(div => div.addEventListener("mouseover", handleMouseOver));
+divs.forEach(div => div.addEventListener("mouseout", handleMouseOut));

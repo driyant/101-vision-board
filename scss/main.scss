@@ -22,14 +22,15 @@ main {
         width: 100%;
         flex-basis: 250px;
         height: 100%;
-        border: 1px solid black;
+        border: 0.5px solid rgb(243, 174, 46);
     }
 
     p {
-        font-size: 1rem;
+        font-size: 1.25rem;
         text-align: center;
         align-items: center;
         text-transform: uppercase;
+        width: 70%;
     }
 
     span {
@@ -38,6 +39,8 @@ main {
         padding: 0.5rem;
         margin: 1rem 0;
         font-weight: map-get($font-weights, bold);
+        font-size: 1.5rem;
+        
 
         &.year {
             background: none;
@@ -66,6 +69,4 @@ main {
         background:$vision-color;
         color: $secondary-text-color;
     }
-
-    @include media-md();
 }

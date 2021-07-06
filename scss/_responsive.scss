@@ -9,5 +9,10 @@
     main {
         @include displayGridColumn(3);
         grid-template-rows: 300px 450px 300px;
+        
+        p {
+            width: 80%;
+            // font-size: 1.5rem;
+        }
     }
 }
