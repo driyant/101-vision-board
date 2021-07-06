@@ -2,9 +2,8 @@ const divs = document.querySelectorAll('div');
 
 const handleMouseOver = (e) => {
     anime({
-        targets: e.target,
+        targets: e.target, // this can be an array
         rotateY: 45,
-        duration:500
     })
 }
 
